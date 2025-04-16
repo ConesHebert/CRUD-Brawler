@@ -21,4 +21,4 @@ class Brawlers(models.Model):
         verbose_name = 'Brawler'
         verbose_name_plural = 'Brawlers'
     def __str__(self):
-        return self.nome
+        return self.Nome
