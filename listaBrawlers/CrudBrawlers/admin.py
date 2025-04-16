@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.models import User,Group
 from .models import Brawlers
 
 
@@ -10,6 +11,7 @@ class listaBrawler(admin.ModelAdmin):
 
     
     # Tirar o registro
-    # admin.site.unregister(Brawlers)
+admin.site.unregister(User)
+admin.site.unregister(Group)
 
 

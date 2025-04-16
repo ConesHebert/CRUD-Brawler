@@ -21,3 +21,6 @@ from django.urls import path
 urlpatterns = [
     path("admin/", admin.site.urls),
 ]
+admin.site.site_header = "Meu Painel de Brawlers"
+admin.site.site_title = "Admin Brawlers"
+admin.site.index_title = "Gerenciamento de Brawlers"

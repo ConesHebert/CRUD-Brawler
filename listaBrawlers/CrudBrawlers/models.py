@@ -13,8 +13,8 @@ RARIDADE_CHOICES = [
 
 class Brawlers(models.Model):
     Nome = models.CharField(max_length=100, verbose_name='Nome')
-    starPowers = models.CharField(max_length=100, verbose_name='Star Powers')
-    gadgets = models.CharField(max_length=100, verbose_name='Gadgets')
+    starPowers = models.CharField(max_length=100, verbose_name='Star Power')
+    gadgets = models.CharField(max_length=100, verbose_name='Gadget')
     raridade = models.CharField(max_length=100, verbose_name='Raridade', choices=RARIDADE_CHOICES)
 
     class Meta:
