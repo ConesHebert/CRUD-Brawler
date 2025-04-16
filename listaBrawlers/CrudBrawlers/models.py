@@ -17,3 +17,8 @@ class Brawlers(models.Model):
     gadgets = models.CharField(max_length=100, verbose_name='Gadgets')
     raridade = models.CharField(max_length=100, verbose_name='Raridade', choices=RARIDADE_CHOICES)
 
+    class Meta:
+        verbose_name = 'Brawler'
+        verbose_name_plural = 'Brawlers'
+    def __str__(self):
+        return self.nome
