@@ -16,3 +16,5 @@ class Brawlers(models.Model):
     gadgets = models.CharField(max_length=100, verbose_name='Gadgets')
 
     raridade = models.CharField(max_length=2, choices=RARIDADE_CHOICES, verbose_name='Raridade')
+
+

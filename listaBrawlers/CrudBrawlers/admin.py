@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Brawlers
 
-# Register your models here.
+@admin.register(Brawlers)
+class listaBrawler(admin.ModelAdmin):
+    list_display = ("Nome",'starPowers','gadgets','raridade')
+    list_filter = ['raridade']
+    
+
