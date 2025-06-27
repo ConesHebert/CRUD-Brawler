@@ -1,4 +1,5 @@
 # CRUD-Brawler LEIA ISSO É IMPORTANTE PRA CAÇAROLAS
+# O nome se mantem nos arquivos pois ia dar um baita trabalho em mudar de tudo, mas o tema foi completamente alterado
 
 Acesso do admin
 Username = admin
