@@ -17,13 +17,19 @@ Including another URLconf
 from core import views
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.lista_musicas, name='lista_musicas'),
+    path('admin/', admin.site.urls),
 ]
 admin.site.site_header = "Meu Painel de Musicas"
 admin.site.site_title = "Admin Musicas"
 admin.site.index_title = "Gerenciamento de Musicas"
 
 
+if settings.DEBUG:
+    #esse negocio é pra se tiver no modo com debug ele vai pegar os static 
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 
