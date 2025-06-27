@@ -1,7 +1,7 @@
 from django.apps import AppConfig
 
 
-class CrudbrawlersConfig(AppConfig):
+class CoreConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "CrudMusicas"
+    name = "core"
     verbose_name = "Tabela de Musicas editavel"

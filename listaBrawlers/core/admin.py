@@ -3,11 +3,10 @@ from django.contrib.auth.models import User,Group
 from .models import Musicas
 
 
-
 @admin.register(Musicas)
 class listaBrawler(admin.ModelAdmin):
-    list_display = ("Nome",'Artista','Album','Genero')
-    list_filter = ['Artista']
+    list_display = ('nome', 'artista', 'album', 'genero')
+    list_filter = ('artista',)
 
     
     # Tirar o registro

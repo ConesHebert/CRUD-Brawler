@@ -14,7 +14,7 @@ GENERO_CHOICES = [
 ]
 
 class Musicas(models.Model):
-    Nome = models.CharField(max_length=100, verbose_name='Nome')
+    nome = models.CharField(max_length=100, verbose_name='Nome')
     artista = models.CharField(max_length=100, verbose_name='Artista')
     album = models.CharField(max_length=100, verbose_name='Album')
     genero = models.CharField(max_length=100, verbose_name='Genero', choices=GENERO_CHOICES)
@@ -23,4 +23,4 @@ class Musicas(models.Model):
         verbose_name = 'Musica'
         verbose_name_plural = 'Musicas'
     def __str__(self):
-        return self.Nome
+        return self.nome
