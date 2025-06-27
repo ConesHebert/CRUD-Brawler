@@ -21,8 +21,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.lista_musicas, name='lista_musicas'),
+    path('', views.listaMusicas, name='listaMusicas'),
     path('admin/', admin.site.urls),
+    path('musica/<int:pk>/', views.detalheMusica, name='detalheMusica'),
 ]
 admin.site.site_header = "Meu Painel de Musicas"
 admin.site.site_title = "Admin Musicas"

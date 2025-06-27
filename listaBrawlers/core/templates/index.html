@@ -41,15 +41,27 @@
             <tbody>
               {% for musica in musicas %}
             <tr>
-              <td>
-                 <a href="#">{{ Musica.id }}</a>
-              </td>
               
-              <td><a href="#">{{ Musica.nome }}</a></td>
-              <td><a href="#">{{ Musica.album }}</a></td>
-              <td><a href="#">{{ Musica.artista }}</a></td>
-              <td><a href="#">{{ Musica.genero }}</a></td>
-            </tr>
+              <!-- <td>
+                a href="#">{{ Musica.id }}</a>
+              </td>
+               -->
+              
+                 <td>{{ forloop.counter }}</td>
+              <td><a href="#">{{ musica.nome }}</a></td> 
+                <td><a href="#">{{ musica.album }}</a></td>
+                <td><a href="#">{{ musica.artista }}</a></td>
+                <td><a href="#">{{ musica.genero }}</a></td>
+                <style>
+                a {
+                  text-decoration: none;
+                  color: #000;
+                }
+                a:hover {
+                  color: #007bff;
+                }
+              </style>
+              </tr>
           {% empty %}  
            <tr colspan="5">
              <td>nenhuma musica foi encontrada</td>
