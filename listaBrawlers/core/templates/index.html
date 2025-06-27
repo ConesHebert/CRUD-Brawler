@@ -5,13 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Produtos</title>
-    <link rel="styleheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Musicas</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Produtos</a>
+            <a class="navbar-brand" href="#">Musicas</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +24,7 @@
       <div class="card mt-2">
         <div class="card-header">
           <div class="row">
-            <h2>Lista de Produtos</h2>
+            <h2>Lista de Musicas</h2>
           </div>
         </div>
         <div class="card-body">
@@ -32,22 +32,27 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nome Produto</th>
+                <th scope="col">Nome Musica</th>
+                <th scope="col">Album da Musica</th>
+                <th scope="col">Artista Musica</th>
+                <th scope="col">Genero Musica</th>
               </tr>
             </thead>
             <tbody>
-              {% for produto in produtos %}
+              {% for Musica in Musicas %}
             <tr>
               <td>
-                 <a href="#">{{ produto.id }}</a>
+                 <a href="#">{{ Musica.id }}</a>
               </td>
               
-              <td><a href="#">{{ produto.nome }}</a></td>
-              <td><a href="#">{{ produto.preco }}</a></td>
+              <td><a href="#">{{ Musica.nome }}</a></td>
+              <td><a href="#">{{ Musica.album }}</a></td>
+              <td><a href="#">{{ Musica.artista }}</a></td>
+              <td><a href="#">{{ Musica.genero }}</a></td>
             </tr>
           {% empty %}  
-           <tr colspan="3">
-             <td>nenhum produto encontrado</td>
+           <tr colspan="5">
+             <td>nenhuma musica foi encontrada</td>
            </tr> 
 
               {% endfor %}
