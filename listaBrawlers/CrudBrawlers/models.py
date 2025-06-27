@@ -3,7 +3,7 @@ from django.db import models
 
     # CHOICES de raridade
 
-RARIDADE_CHOICES = [
+GENERO_CHOICES = [
     ('RR', "Raro"),
     ('SR', "Super Raro"),
     ('EP', "Épico"),
